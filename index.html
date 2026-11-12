@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Yarn Edit — Demo K (proof: street → door → rail)</title>
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <style>
+      @font-face {
+        font-family: 'Zilla Slab';
+        src: url('./fonts/zilla-slab-500.woff2') format('woff2');
+        font-weight: 500;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'Zilla Slab';
+        src: url('./fonts/zilla-slab-600.woff2') format('woff2');
+        font-weight: 600;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'Nunito';
+        src: url('./fonts/nunito-var.woff2') format('woff2');
+        font-weight: 100 1000;
+        font-display: swap;
+      }
+    </style>
+    <script type="module" crossorigin src="./assets/index-CMBMMqce.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CxA6-dnl.css">
+  </head>
+  <body>
+    <canvas id="scene"></canvas>
+
+    <!-- Projected signage: real DOM text anchored to 3D points each frame -->
+    <div id="sign" class="sign" aria-hidden="true">
+      <div class="sign-name">Yarn Edit</div>
+      <div class="sign-sub">HANDMADE CROCHET STUDIO · HYDERABAD</div>
+    </div>
+    <div id="enterLabel" class="enter-label" aria-hidden="true">ENTER</div>
+    <div id="zoneLabel" class="zone-label" aria-hidden="true">ON THE LINE</div>
+
+    <div id="scrollHint" class="scroll-hint" aria-hidden="true">
+      <span class="scroll-hint-text">SCROLL TO ENTER</span>
+      <span class="scroll-hint-thread"></span>
+    </div>
+
+    <div id="flare" aria-hidden="true"></div>
+    <div id="veil" aria-hidden="true"><div class="veil-mark">Yarn Edit</div></div>
+    <div id="proofTag" aria-hidden="true">DEMO K · PROOF</div>
+
+    <!-- Preview overlay (demo-b language) -->
+    <div id="preview" class="preview" hidden role="dialog" aria-modal="true" aria-labelledby="pvName">
+      <div class="preview-backdrop" data-close></div>
+      <div class="preview-card">
+        <button class="preview-close" data-close aria-label="Close preview">×</button>
+        <div class="preview-media">
+          <img id="pvImg" alt="" />
+          <div id="pvThumbs" class="preview-thumbs"></div>
+        </div>
+        <div class="preview-info">
+          <h3 id="pvName"></h3>
+          <p id="pvPrice" class="preview-price"></p>
+          <p id="pvSpec" class="preview-spec"></p>
+          <a id="pvOrder" class="preview-order" href="https://www.instagram.com/the.yarn.edit_/" target="_blank" rel="noopener">Order on Instagram</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="scrollSpace"></div>
+
+  </body>
+</html>
